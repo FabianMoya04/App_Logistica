@@ -24,11 +24,11 @@ public class ProductosService {
     }
 
     public Optional<ProductosORM> obtenerProductoPorId(int id_producto) {
-        return productosJPA.findByIdProducto(id_producto);
+        return productosJPA.findById_producto(id_producto);
     }
 
     public void eliminarProductoPorId(int id_producto) {
-        productosJPA.deleteByIdProducto(id_producto);
+        productosJPA.deleteById_producto(id_producto);
     }
 
 }
