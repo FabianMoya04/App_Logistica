@@ -27,9 +27,10 @@ public class ProductosController {
         return new ResponseEntity<>(productosService.getAllProductos(), HttpStatus.OK);
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<Optional<Productos>> obtenerProductoPorId(@PathVariable("id") ObjectId id) {
-        return new ResponseEntity<>(productosService.getProductoById(id), HttpStatus.OK);
+    @GetMapping("/{id_producto}")
+    public ResponseEntity<Productos> obtenerProductoPorId(@PathVariable("id_producto") int id_producto) {
+        Optional<Productos> producto = productosService.obtenerProductoPorId(id_producto);
+        return producto.map(value -> new ResponseEntity<>(value, HttpStatus.OK)).orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
 
     @PostMapping
@@ -37,9 +38,9 @@ public class ProductosController {
         return new ResponseEntity<>(productosService.saveProducto(producto), HttpStatus.CREATED);
     }
 
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Void> eliminarProducto(@PathVariable("id") ObjectId id) {
-        productosService.deleteProducto(id);
+    @DeleteMapping("/{id_producto}")
+    public ResponseEntity<Void> eliminarProducto(@PathVariable("id_producto") int id_producto) {
+        productosService.eliminarProductoPorId(id_producto);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 

@@ -17,16 +17,16 @@ public class ProductosService {
         return productosJPA.findAll();
     }
 
-    public Optional<Productos> getProductoById(ObjectId _id) {
-        return productosJPA.findById(_id);
-    }
-
     public Productos saveProducto(Productos producto) {
         return productosJPA.save(producto);
     }
 
-    public void deleteProducto(ObjectId _Id) {
-        productosJPA.deleteById(_Id);
+    public Optional<Productos> obtenerProductoPorId(int id_producto) {
+        return productosJPA.findByIdProducto(id_producto);
+    }
+
+    public void eliminarProductoPorId(int id_producto) {
+        productosJPA.deleteByIdProducto(id_producto);
     }
 
 }
