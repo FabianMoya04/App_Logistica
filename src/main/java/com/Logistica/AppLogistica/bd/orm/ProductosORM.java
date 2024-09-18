@@ -1,6 +1,4 @@
-package com.Logistica.AppLogistica;
-
-import java.util.Date;
+package com.Logistica.AppLogistica.bd.orm;
 
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
@@ -14,18 +12,15 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class RegistroUsuarios {
+public class ProductosORM {
     @Id
     private ObjectId _id;
+    
+    private int id_producto;
+    private String nombre_producto;
+    private String descripcion;
+    private int cantidad;
+    private double precio;
+    private int id_categoria;
 
-    private int id;
-
-    private String nombre_completo;
-
-    private String email;
-
-    private String password;
-
-    private Date fecha_registro;
 }
-

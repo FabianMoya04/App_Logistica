@@ -1,4 +1,4 @@
-package com.Logistica.AppLogistica;
+package com.Logistica.AppLogistica.bd.orm;
 
 import java.util.Date;
 
@@ -10,12 +10,11 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Document(collection = "usuarios")
+@Document(collection = "productos")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Usuarios {
-
+public class RegistroUsuariosORM {
     @Id
     private ObjectId _id;
 
@@ -28,5 +27,5 @@ public class Usuarios {
     private String password;
 
     private Date fecha_registro;
-    
 }
+

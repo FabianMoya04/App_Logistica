@@ -1,4 +1,4 @@
-package com.Logistica.AppLogistica;
+package com.Logistica.AppLogistica.logica;
 
 import java.util.List;
 import java.util.Optional;
@@ -7,21 +7,24 @@ import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.Logistica.AppLogistica.bd.jpa.ProductosJPA;
+import com.Logistica.AppLogistica.bd.orm.ProductosORM;
+
 @Service
 public class ProductosService {
 
     @Autowired
     private ProductosJPA productosJPA;
 
-    public List<Productos> getAllProductos() {
+    public List<ProductosORM> getAllProductos() {
         return productosJPA.findAll();
     }
 
-    public Productos saveProducto(Productos producto) {
+    public ProductosORM saveProducto(ProductosORM producto) {
         return productosJPA.save(producto);
     }
 
-    public Optional<Productos> obtenerProductoPorId(int id_producto) {
+    public Optional<ProductosORM> obtenerProductoPorId(int id_producto) {
         return productosJPA.findByIdProducto(id_producto);
     }
 

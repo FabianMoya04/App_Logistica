@@ -1,4 +1,4 @@
-package com.Logistica.AppLogistica;
+package com.Logistica.AppLogistica.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -15,6 +15,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.Logistica.AppLogistica.bd.orm.ProductosORM;
+import com.Logistica.AppLogistica.logica.ProductosService;
+
 @RestController
 @RequestMapping("/api/productos")
 public class ProductosController {
@@ -23,18 +26,18 @@ public class ProductosController {
     private ProductosService productosService;
 
     @GetMapping
-    public ResponseEntity<List<Productos>> obtenerTodosLosProductos() {
+    public ResponseEntity<List<ProductosORM>> obtenerTodosLosProductos() {
         return new ResponseEntity<>(productosService.getAllProductos(), HttpStatus.OK);
     }
 
     @GetMapping("/{id_producto}")
-    public ResponseEntity<Productos> obtenerProductoPorId(@PathVariable("id_producto") int id_producto) {
-        Optional<Productos> producto = productosService.obtenerProductoPorId(id_producto);
+    public ResponseEntity<ProductosORM> obtenerProductoPorId(@PathVariable("id_producto") int id_producto) {
+        Optional<ProductosORM> producto = productosService.obtenerProductoPorId(id_producto);
         return producto.map(value -> new ResponseEntity<>(value, HttpStatus.OK)).orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
 
     @PostMapping
-    public ResponseEntity<Productos> crearProducto(@RequestBody Productos producto) {
+    public ResponseEntity<ProductosORM> crearProducto(@RequestBody ProductosORM producto) {
         return new ResponseEntity<>(productosService.saveProducto(producto), HttpStatus.CREATED);
     }
 

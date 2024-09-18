@@ -1,4 +1,4 @@
-package com.Logistica.AppLogistica;
+package com.Logistica.AppLogistica.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.Logistica.AppLogistica.bd.orm.UsuariosORM;
+import com.Logistica.AppLogistica.logica.UsuariosService;
+
 @RestController
 @RequestMapping("/registro/usuarios")
 public class UsuariosController {
@@ -21,12 +24,12 @@ public class UsuariosController {
 
     
     @GetMapping
-    public ResponseEntity<List<Usuarios>> obtenerUsuarios() {
-        return new ResponseEntity<List<Usuarios>>(usuariosService.allUsuarios(), HttpStatus.OK);
+    public ResponseEntity<List<UsuariosORM>> obtenerUsuarios() {
+        return new ResponseEntity<List<UsuariosORM>>(usuariosService.allUsuarios(), HttpStatus.OK);
     }
 
     @GetMapping("/{_id}")
-    public ResponseEntity<Optional<Usuarios> > getItemById(@PathVariable("_id") ObjectId _id) {
-        return new ResponseEntity<Optional<Usuarios>>(usuariosService.singleUsuario(_id), HttpStatus.OK);
+    public ResponseEntity<Optional<UsuariosORM> > getItemById(@PathVariable("_id") ObjectId _id) {
+        return new ResponseEntity<Optional<UsuariosORM>>(usuariosService.singleUsuario(_id), HttpStatus.OK);
     }
 }
