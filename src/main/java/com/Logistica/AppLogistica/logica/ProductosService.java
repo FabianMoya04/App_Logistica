@@ -3,6 +3,7 @@ package com.Logistica.AppLogistica.logica;
 import java.util.List;
 import java.util.Optional;
 
+import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,12 +24,11 @@ public class ProductosService {
         return productosJPA.save(producto);
     }
 
-    public Optional<ProductosORM> obtenerProductoPorId(int id_producto) {
-        return productosJPA.findById_producto(id_producto);
+    public Optional<ProductosORM> obtenerProductoPorId(ObjectId id) {
+        return productosJPA.findById(id);
     }
 
-    public void eliminarProductoPorId(int id_producto) {
-        productosJPA.deleteById_producto(id_producto);
-    }
+    public void eliminarProductoPorId(ObjectId id) {
+        productosJPA.deleteById(id);    }
 
 }

@@ -3,6 +3,7 @@ package com.Logistica.AppLogistica.controller;
 import java.util.List;
 import java.util.Optional;
 
+import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -29,9 +30,10 @@ public class ProductosController {
         return new ResponseEntity<>(productosService.getAllProductos(), HttpStatus.OK);
     }
 
-    @GetMapping("/{id_producto}")
-    public ResponseEntity<ProductosORM> obtenerProductoPorId(@PathVariable("id_producto") int id_producto) {
-        Optional<ProductosORM> producto = productosService.obtenerProductoPorId(id_producto);
+    @GetMapping("/{id}")
+    public ResponseEntity<ProductosORM> obtenerProductoPorId(@PathVariable("id") String id) {
+       ObjectId objectId = new ObjectId(id);
+        Optional<ProductosORM> producto = productosService.obtenerProductoPorId(objectId);
         return producto.map(value -> new ResponseEntity<>(value, HttpStatus.OK)).orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
 
@@ -40,9 +42,10 @@ public class ProductosController {
         return new ResponseEntity<>(productosService.saveProducto(producto), HttpStatus.CREATED);
     }
 
-    @DeleteMapping("/{id_producto}")
-    public ResponseEntity<Void> eliminarProducto(@PathVariable("id_producto") int id_producto) {
-        productosService.eliminarProductoPorId(id_producto);
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> eliminarProducto(@PathVariable("id") String id) {
+        ObjectId objectId = new ObjectId(id);
+        productosService.eliminarProductoPorId(objectId);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
