@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
 
+
 @Service
 public class CategoriaService {
     @Autowired
@@ -25,7 +26,11 @@ public class CategoriaService {
         return categoriaRepository.save(categoria);
     }
 
-    public void eliminarCategoria(String id) {
-        categoriaRepository.deleteById(id);
+    public boolean eliminarCategoria(String id) {
+        if (categoriaRepository.existsById(id)) {
+            categoriaRepository.deleteById(id);
+            return true;
+        }
+        return false;
     }
 }
