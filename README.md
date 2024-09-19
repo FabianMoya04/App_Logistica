@@ -1,7 +1,6 @@
-DIAGRAMA DE COMPONENTES 
+## **Diagrama de componentes**
 ![image](https://github.com/user-attachments/assets/80ee8d5b-dee5-4192-a306-bc82cfca8601)
 
-
-DIAGRAMA DE PAQUETES
+## **Diagrama de paquetes**
 
 ![image](https://github.com/user-attachments/assets/e0711a17-a27e-4699-b8bf-c00fcd59e5be)
