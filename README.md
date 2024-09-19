@@ -1,5 +1,5 @@
 # Sistema de Gestión de Inventarios
-##*Valentina López, Juan daniel González & Fabian Moya*
+*Valentina López, Juan daniel González & Fabian Moya*
 
 ## Descripción
 
