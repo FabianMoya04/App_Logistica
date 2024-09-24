@@ -1,4 +1,4 @@
-package com.Logistica.AppLogistica.logica.GestionProducto;
+package com.Logistica.AppLogistica.logica.gestionproducto;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

@@ -1,4 +1,4 @@
-package com.Logistica.AppLogistica.logica.GestionUsuario;
+package com.Logistica.AppLogistica.logica.gestionusuario;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;

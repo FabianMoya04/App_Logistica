@@ -1,4 +1,4 @@
-package com.Logistica.AppLogistica.logica.GestionCliente;
+package com.Logistica.AppLogistica.logica.gestioncliente;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

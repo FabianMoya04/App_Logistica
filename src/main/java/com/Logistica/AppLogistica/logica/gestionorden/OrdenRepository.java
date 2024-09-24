@@ -1,4 +1,4 @@
-package com.Logistica.AppLogistica.logica.GestionOrden;
+package com.Logistica.AppLogistica.logica.gestionorden;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;

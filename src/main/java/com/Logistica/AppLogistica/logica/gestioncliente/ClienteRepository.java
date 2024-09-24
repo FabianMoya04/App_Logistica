@@ -1,4 +1,4 @@
-package com.Logistica.AppLogistica.logica.GestionCliente;
+package com.Logistica.AppLogistica.logica.gestioncliente;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;

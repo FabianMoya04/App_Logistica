@@ -1,4 +1,4 @@
-package com.Logistica.AppLogistica.logica.AutenticacionUsuarios;
+package com.Logistica.AppLogistica.logica.autenticacionusuarios;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

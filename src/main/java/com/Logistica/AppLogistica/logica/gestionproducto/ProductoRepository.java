@@ -1,4 +1,4 @@
-package com.Logistica.AppLogistica.logica.GestionProducto;
+package com.Logistica.AppLogistica.logica.gestionproducto;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 

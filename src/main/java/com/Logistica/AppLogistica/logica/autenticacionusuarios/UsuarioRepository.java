@@ -1,4 +1,4 @@
-package com.Logistica.AppLogistica.logica.AutenticacionUsuarios;
+package com.Logistica.AppLogistica.logica.autenticacionusuarios;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;

@@ -1,4 +1,4 @@
-package com.Logistica.AppLogistica.logica.GestionCategoria;
+package com.Logistica.AppLogistica.logica.gestioncategoria;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

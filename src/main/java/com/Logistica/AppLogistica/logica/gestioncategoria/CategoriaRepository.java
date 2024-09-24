@@ -1,4 +1,4 @@
-package com.Logistica.AppLogistica.logica.GestionCategoria;
+package com.Logistica.AppLogistica.logica.gestioncategoria;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 

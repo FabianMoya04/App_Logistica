@@ -1,7 +1,7 @@
-package com.Logistica.AppLogistica.logica.GestionCategoria;
+package com.Logistica.AppLogistica.logica.gestioncategoria;
 
-import com.Logistica.AppLogistica.logica.GestionProducto.Producto;
-import com.Logistica.AppLogistica.logica.GestionProducto.ProductoService;
+import com.Logistica.AppLogistica.logica.gestionproducto.Producto;
+import com.Logistica.AppLogistica.logica.gestionproducto.ProductoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
