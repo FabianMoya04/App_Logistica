@@ -44,4 +44,4 @@ Este proyecto está actualmente en desarrollo. Las conexiones entre la base de d
 
 ## **Diagrama de paquetes**
 
-![image](https://github.com/user-attachments/assets/b16a241e-9c9c-4ae8-9dbb-49027d3ee996)
+![Diagrama de paquetes](https://github.com/user-attachments/assets/5b94a1df-0396-4c43-816b-c6f8a6a5fc9c)
