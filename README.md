@@ -1,5 +1,5 @@
 # Sistema de Gestión de Inventarios
-*Valentina López, Juan daniel González & Fabian Moya*
+*Valentina López, Juan daniel González García & Fabian Moya*
 
 ## Descripción
 
@@ -35,7 +35,12 @@ Este proyecto está actualmente en desarrollo. Las conexiones entre la base de d
 ## Diagramas
 
 ## **Diagrama de componentes**
-![image](https://github.com/user-attachments/assets/80ee8d5b-dee5-4192-a306-bc82cfca8601)
+![Diagrama autenticacion usuarios](https://github.com/user-attachments/assets/6186864b-3e10-49ae-9b32-2d73b370bdcc)
+![Diagrama gestion categoria](https://github.com/user-attachments/assets/a365deec-9aa8-4261-9cc5-987a5dbaf87d)
+![Diagrama gestion cliente](https://github.com/user-attachments/assets/ffc542c2-3132-45aa-9d7e-fb28235c0313)
+![Diagrama gestion orden](https://github.com/user-attachments/assets/86f9b07f-805e-45df-b613-962907059b03)
+![Diagrama gestion producto](https://github.com/user-attachments/assets/2f3f61bb-7a5f-4804-85ba-a5faab45202c)
+![Diagrama gestion usuario](https://github.com/user-attachments/assets/1529112c-8526-4f51-9be6-953d6c1caba7)
 
 ## **Diagrama de paquetes**
 
