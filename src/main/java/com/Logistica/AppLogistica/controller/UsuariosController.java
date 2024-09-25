@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.Logistica.AppLogistica.bd.orm.UsuariosORM;
-import com.Logistica.AppLogistica.logica.UsuariosService;
 
 @RestController
 @RequestMapping("/registro/usuarios")

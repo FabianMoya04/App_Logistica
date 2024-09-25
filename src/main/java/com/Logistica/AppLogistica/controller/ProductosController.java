@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.Logistica.AppLogistica.bd.orm.ProductosORM;
-import com.Logistica.AppLogistica.logica.ProductosService;
 
 @RestController
 @RequestMapping("/api/productos")
