@@ -14,11 +14,11 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/", "/crearUsuario").permitAll() // Permite acceso público
-                        .anyRequest().authenticated() // Todas las demás rutas requieren autenticación
+                        .requestMatchers("/", "/crearUsuario").permitAll() // Permitir acceso a la raíz y crear usuario
+                        .anyRequest().permitAll() // Permitir acceso a todas las demás rutas
                 )
-                .csrf(csrf -> csrf.disable()) // Desactiva CSRF
-                .formLogin(form -> form.disable()); // Desactiva el formulario de login
+                .csrf(csrf -> csrf.disable()) // Desactivar protección CSRF
+                .formLogin(form -> form.disable()); // Desactivar formulario de login
         return http.build();
     }
 }
