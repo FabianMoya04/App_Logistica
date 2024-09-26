@@ -1,6 +1,5 @@
-package com.Logistica.AppLogistica.bd.orm;
+package com.Logistica.AppLogistica.logica.autenticacionusuarios;
 
-import java.util.Date;
 
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
@@ -22,7 +21,6 @@ public class UsuariosORM {
     private String nombre_completo;
     private String email;
     private String password;
-    private Date fecha_registro;
 
     public ObjectId get_id() {
         return this._id;
@@ -62,15 +60,6 @@ public class UsuariosORM {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public Date getFecha_registro() {
-        return this.fecha_registro;
-    }
-
-    public void setFecha_registro(Date fecha_registro) {
-        this.fecha_registro = fecha_registro;
-    }
-    
+    }    
 
 }
