@@ -10,15 +10,15 @@ public class ProductoService {
     @Autowired
     private ProductoRepository productoRepository;
 
-    public List<Producto> listarProductos() {
+    public List<ProductoORM> listarProductos() {
         return productoRepository.findAll();
     }
 
-    public Producto agregarProducto(Producto producto) {
+    public ProductoORM agregarProducto(ProductoORM producto) {
         return productoRepository.save(producto);
     }
 
-    public Producto editarProducto(Producto producto) {
+    public ProductoORM editarProducto(ProductoORM producto) {
         return productoRepository.save(producto);
     }
 
@@ -26,11 +26,11 @@ public class ProductoService {
         productoRepository.deleteById(id);
     }
 
-    public List<Producto> buscarProducto(String nombre) {
+    public List<ProductoORM> buscarProducto(String nombre) {
         return productoRepository.findByNombreProductoContaining(nombre);
     }
 
-    public List<Producto> listarProductosPorCategoria(String idCategoria) {
+    public List<ProductoORM> listarProductosPorCategoria(String idCategoria) {
         return productoRepository.findByIdCategoria(idCategoria);
     }
 }

@@ -13,22 +13,17 @@ public class ProductoController {
     private ProductoService productoService;
 
     @GetMapping
-    public List<Producto> listar() {
+    public List<ProductoORM> listar() {
         return productoService.listarProductos();
     }
 
     @PostMapping
-    public ResponseEntity<Producto> agregar(@RequestBody Producto producto) {
-        Producto nuevoProducto = productoService.agregarProducto(producto);
+    public ResponseEntity<ProductoORM> agregar(@RequestBody ProductoORM producto) {
+        ProductoORM nuevoProducto = productoService.agregarProducto(producto);
         return ResponseEntity.ok(nuevoProducto);
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity<Producto> editar(@PathVariable String id, @RequestBody Producto producto) {
-        producto.setIdProducto(id);
-        Producto productoEditado = productoService.editarProducto(producto);
-        return ResponseEntity.ok(productoEditado);
-    }
+
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> eliminar(@PathVariable String id) {
@@ -37,7 +32,7 @@ public class ProductoController {
     }
 
     @GetMapping("/buscar")
-    public List<Producto> buscar(@RequestParam String nombre) {
+    public List<ProductoORM> buscar(@RequestParam String nombre) {
         return productoService.buscarProducto(nombre);
     }
 }

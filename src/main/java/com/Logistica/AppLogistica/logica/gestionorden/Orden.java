@@ -2,7 +2,7 @@ package com.Logistica.AppLogistica.logica.gestionorden;
 
 import lombok.Data;
 import com.Logistica.AppLogistica.logica.gestioncliente.Cliente;
-import com.Logistica.AppLogistica.logica.gestionproducto.Producto;
+import com.Logistica.AppLogistica.logica.gestionproducto.ProductoORM;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import java.math.BigDecimal;
@@ -18,7 +18,7 @@ public class Orden {
 
     private Cliente cliente;
 
-    private List<Producto> productos;
+    private List<ProductoORM> productos;
 
     private LocalDateTime fechaOrden;
 

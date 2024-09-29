@@ -1,6 +1,6 @@
 package com.Logistica.AppLogistica.logica.gestioncategoria;
 
-import com.Logistica.AppLogistica.logica.gestionproducto.Producto;
+import com.Logistica.AppLogistica.logica.gestionproducto.ProductoORM;
 import com.Logistica.AppLogistica.logica.gestionproducto.ProductoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -14,7 +14,7 @@ public class ListarPorCategoria {
     private ProductoService productoService;
 
     @GetMapping("/categoria/{idCategoria}")
-    public List<Producto> listarPorCategoria(@PathVariable String idCategoria) {
+    public List<ProductoORM> listarPorCategoria(@PathVariable String idCategoria) {
         return productoService.listarProductosPorCategoria(idCategoria);
     }
 }
